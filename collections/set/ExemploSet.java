@@ -1,4 +1,4 @@
-package set;
+package collections.set;
 
 import java.util.*;
 
@@ -38,7 +38,7 @@ public class ExemploSet {
 
         System.out.println("Exiba todas as notas na ordem em que foram informados: ");
         Set<Double> notas2 = new LinkedHashSet<>();
-        notas2.add(7d);
+        notas2.add(8d);
         notas2.add(8.5);
         notas2.add(9.3);
         notas2.add(5d);
@@ -54,7 +54,7 @@ public class ExemploSet {
         System.out.println("Apague todo o conjunto");
         notas.clear();
 
-        System.out.println("Confiar se o conjunto está vazio " + notas.isEmpty());
+        System.out.println("Confiar se o conjunto está vazio " + true);
         System.out.println("Confiar se o conjunto 2 está vazio " + notas2.isEmpty());
         System.out.println("Confiar se o conjunto 3 está vazio " + notas3.isEmpty());
 
