@@ -11,5 +11,13 @@ e) Nome, ano de criação e IDE;
 Ao final, exiba as linguagens no console, um abaixo da outra.
 */
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ExercicioSet02 {
+
+    public static void main(String[] args) {
+        Set<LinguagemFavorita> myLangs = new HashSet<>();
+
+    }
 }
