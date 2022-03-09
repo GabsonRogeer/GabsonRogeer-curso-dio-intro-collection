@@ -19,7 +19,6 @@ public class Exercicio02 {
         respostas = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.println("----------------------------------------");
         System.out.println("------------ Interrogatorio ------------");
         System.out.println("----------------------------------------");
@@ -55,10 +54,11 @@ public class Exercicio02 {
         }
 
         switch (count) {
-            case 2 -> System.out.println("\n------------- SUSPEITA!!! -------------");
-            case 3, 4 -> System.out.println("\n------------- CÚMPLICE!!! --------------");
-            case 5 -> System.out.println("\n------------- ASSASSINO!!! ------------");
-            default -> System.out.println("\n-------------   INOCENTE   ------------");
+            case 2 : System.out.println("\n------------- SUSPEITA!!! -------------");
+            case 3 : System.out.println("\n------------- CÚMPLICE!!! --------------");
+            case 4 : System.out.println("\n------------- CÚMPLICE!!! --------------");
+            case 5 : System.out.println("\n------------- ASSASSINO!!! ------------");
+            default : System.out.println("\n-------------   INOCENTE   ------------");
         }
 
         System.out.println("----------------------------------------");
@@ -66,5 +66,6 @@ public class Exercicio02 {
         System.out.println("------------ INTERROGATORIO ------------");
         System.out.println("----------------------------------------");
 
+        scanner.close();
     }
 }

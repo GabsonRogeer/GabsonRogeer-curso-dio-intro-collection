@@ -5,9 +5,10 @@ import java.util.*;
 public class ExemploOrdenacaoList {
     public static void main(String[] args) {
         List<Gato> meusGatos = new ArrayList<>() {{
-            add(new Gato("Lili", "Branca", 24));
+            add(new Gato("Lili", "Branca", 5));
             add(new Gato("Maya", "Caramelo", 19));
             add(new Gato("Anakin", "Preto", 16));
+            add(new Gato("Simba", "Tigrado", 12));
         }};
 
         System.out.println("--\tOrdem de Inserção\t--");
