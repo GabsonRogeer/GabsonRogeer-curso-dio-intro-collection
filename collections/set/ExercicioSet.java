@@ -28,18 +28,18 @@ public class ExercicioSet {
         coresArcoIris.add("vermelho");
         System.out.println(coresArcoIris);
 
-        System.out.println("Exiba todas as cores o arco-íris uma abaixo da outra: ");
+        System.out.println("\nExiba todas as cores o arco-íris uma abaixo da outra: ");
         for (String cor : coresArcoIris) {
             System.out.println(cor);
         }
 
-        System.out.println("A quantidade de cores que o arco-íris tem: " + coresArcoIris.size());
+        System.out.println("\nA quantidade de cores que o arco-íris tem: " + coresArcoIris.size());
 
-        System.out.println("Exiba as cores em ordem alfabética: ");
+        System.out.println("\nExiba as cores em ordem alfabética: ");
         Set<String> coresArcoIris2 = new TreeSet<>(coresArcoIris);
         System.out.println(coresArcoIris2);
 
-        System.out.println("Exiba as cores na ordem inversa da que foi informada ");
+        System.out.println("\nExiba as cores na ordem inversa da que foi informada ");
         Set<String> coresArcoIris3 = new LinkedHashSet<>(
                 Arrays.asList("violeta", "anil", "azul", "verde", "amarelo", "laranja", "vermelho"));
         System.out.println(coresArcoIris3);
@@ -47,21 +47,21 @@ public class ExercicioSet {
         Collections.reverse(coresArcoIrisList);
         System.out.println(coresArcoIrisList);
 
-        System.out.println("Exiba todas as cores que começam com a letra ”v”: ");
+        System.out.println("\nExiba todas as cores que começam com a letra ”v”: ");
         for (String cor: coresArcoIris) {
             if(cor.startsWith("v")) System.out.println(cor);
         }
 
-        System.out.println("Remova todas as cores que não começam com a letra “v”: ");
+        System.out.println("\nRemova todas as cores que não começam com a letra “v”: ");
         Iterator<String> iterator2 = coresArcoIris.iterator();
         while (((Iterator<?>) iterator2).hasNext()) {
             if (!iterator2.next().startsWith("v")) iterator2.remove();
         }
         System.out.println(coresArcoIris);
 
-        System.out.println("Limpe o conjunto: ");
+        System.out.println("\nLimpe o conjunto: ");
         coresArcoIris.clear();
 
-        System.out.println("Confira se o conjunto está vazio: " + true);
+        System.out.println("\nConfira se o conjunto está vazio: " + true);
     }
 }

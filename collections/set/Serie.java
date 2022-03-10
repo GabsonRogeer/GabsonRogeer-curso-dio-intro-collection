@@ -68,3 +68,27 @@ class Serie implements Comparable<Serie> {
 
         }
     }
+
+    class CompareGenero implements Comparator<Serie> {
+
+        @Override
+        public int compare(Serie s1, Serie s2) {
+            int nome = s1.getNome().compareTo(s2.getNome());
+            if (nome != 0) return nome;
+
+            int tempo = s1.getTempodeEpisodio().compareTo(s2.getTempodeEpisodio());
+            if (tempo != 0) return tempo;
+
+            int compare = CharSequence.compare(s1.getGenero(), s2.getGenero());
+            return compare;
+        }
+    }
+
+    class CompareTempo implements Comparator<Serie> {
+
+        @Override
+        public int compare(Serie s1, Serie s2) {
+            int compare = Integer.compare(s1.getTempodeEpisodio(), s2.getTempodeEpisodio());
+            return compare;
+        }
+    }

@@ -19,7 +19,7 @@ public class ExemploOrdenacaoSet extends Serie {
 
     public static void main(String[] args) {
 
-        System.out.println("--\tOrdem aleatória\t--");
+        System.out.println("\n--\tOrdem aleatória\t--");
         Set<Serie> minhasSeries = new HashSet<Serie>() {{
             add(new Serie("Atypical", "Drama", 23));
             add(new Serie("Dark", "Drama", 60));
@@ -30,7 +30,7 @@ public class ExemploOrdenacaoSet extends Serie {
                 + serie.getGenero() + " - " + serie.getTempodeEpisodio());
 
 
-        System.out.println("--\tOrdem inserção\t--");
+        System.out.println("\n--\tOrdem inserção\t--");
         Set<Serie> minhasSeries1 = new LinkedHashSet<>() {{
             add(new Serie("Ozark", "Drama", 25));
             add(new Serie("Naomi", "Drama", 45));
@@ -41,14 +41,14 @@ public class ExemploOrdenacaoSet extends Serie {
                     + serie.getGenero() + " - " + serie.getTempodeEpisodio());
 
 
-        System.out.println("--\tOrdem natural (TempoEpisodio)\t--");
+        System.out.println("\n--\tOrdem natural (TempoEpisodio)\t--");
         Set<Serie> minhasSeries2 = new TreeSet<>(minhasSeries1);
         for (Serie serie : minhasSeries2)
             System.out.println(serie.getNome() + " - "
                     + serie.getGenero() + " - " + serie.getTempodeEpisodio());
 
 
-        System.out.println("--\tOrdem Nome/Gênero/TempoEpisodio\t--");
+        System.out.println("\n--\tOrdem Nome/Gênero/TempoEpisodio\t--");
         Set<Serie> minhasSeries3 = new TreeSet<>(new NomeGeneroTime());
         minhasSeries3.addAll(minhasSeries);
         for (Serie serie : minhasSeries3)
@@ -56,9 +56,19 @@ public class ExemploOrdenacaoSet extends Serie {
                     + serie.getGenero() + " - " + serie.getTempodeEpisodio());
 
 
-        System.out.println("--\tOrdem gênero\t--");
+        System.out.println("\n--\tOrdem gênero\t--");
+        Set<Serie> minhasSeries4 = new TreeSet<>(new CompareGenero());
+        minhasSeries4.addAll(minhasSeries);
+        for (Serie serie : minhasSeries4)
+            System.out.println(serie.getNome() + " - "
+                    + serie.getGenero() + " - " + serie.getTempodeEpisodio());
 
-        System.out.println("--\tOrdem Tempo Episódio\t--");
+        System.out.println("\n--\tOrdem Tempo Episódio\t--");
+        Set<Serie> minhasSeries5 = new TreeSet<>(new CompareGenero());
+        minhasSeries5.addAll(minhasSeries);
+        for (Serie serie : minhasSeries4)
+            System.out.println(serie.getNome() + " - "
+                    + serie.getGenero() + " - " + serie.getTempodeEpisodio());
 
     }
 }
