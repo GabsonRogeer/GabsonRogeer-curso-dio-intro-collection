@@ -7,16 +7,16 @@ public class ExemploSet {
 
 
         System.out.println("Crie um conjunto e adicione as notas: ");
-        Set<Double> notas = new HashSet<>(Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 3.4));
+        Set<Double> notas = new HashSet<>(Arrays.asList(7d, 0.0, 8.5, 9.3, 5d, 7d, 3.4));
         System.out.println(notas.toString());
 
-        System.out.println("Confira se a nota 5.0 está no conjunto: " + notas.contains(5d));
+        System.out.println("\nConfira se a nota 5.0 está no conjunto: " + notas.contains(5d));
 
-        System.out.println("Exiba a menor nota: " + Collections.min(notas));
+        System.out.println("\nExiba a menor nota: " + Collections.min(notas));
 
-        System.out.println("Exiba a mior nota: " + Collections.max(notas));
+        System.out.println("\nExiba a maior nota: " + Collections.max(notas));
 
-        System.out.println("Exiba a soma dos valores: " );
+        System.out.println("\nExiba a soma dos valores: " );
         Iterator<Double> iterator = notas.iterator();
         Double soma = 0.0;
         while (iterator.hasNext()) {
@@ -25,7 +25,7 @@ public class ExemploSet {
         }
         System.out.println("A soma dos valores é de: " + soma);
 
-        System.out.println("Exima a média das notas: " + (soma/ notas.size()));
+        System.out.println("Exiba a média das notas: " + (soma/ notas.size()));
 
         System.out.println("Remova a nota 0; ");
         notas.remove(0d);
@@ -53,10 +53,11 @@ public class ExemploSet {
 
         System.out.println("Apague todo o conjunto");
         notas.clear();
+        notas3.clear();
 
-        System.out.println("Confiar se o conjunto está vazio " + true);
-        System.out.println("Confiar se o conjunto 2 está vazio " + notas2.isEmpty());
-        System.out.println("Confiar se o conjunto 3 está vazio " + notas3.isEmpty());
+        System.out.println("Confiar se o conjunto 1 está vazio? " + notas.isEmpty());
+        System.out.println("Confiar se o conjunto 2 está vazio? " + notas2.isEmpty());
+        System.out.println("Confiar se o conjunto 3 está vazio? " + notas3.isEmpty());
 
     }
 }
