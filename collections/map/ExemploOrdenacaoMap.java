@@ -22,7 +22,7 @@ public class ExemploOrdenacaoMap {
             put("Duhigg, Charles", new Livro("O Poder do Hábito.", 408));
             put("Harari, Yuval Noah", new Livro("21 Lições Para o Século 21", 432));
             put("Cortella, Mário Sergio", new Livro("Por que Fazemos o que Fazemos?", 176));
-            put("Cortella, Mário Sergio", new Livro("Qual é a tua obra?", 144));
+            //put("Cortella, Mário Sergio", new Livro("Qual é a tua obra?", 144));
         }};
 
         for(Map.Entry<String, Livro> livro : meusLivros.entrySet()) System.out.println(livro.getKey() + " - " + livro.getValue().getNome());
@@ -53,14 +53,14 @@ public class ExemploOrdenacaoMap {
             System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
         }
 
-        System.out.println("\n--\tOrdem número de página\t--"); //Pra você
+        /*System.out.println("\n--\tOrdem número de página\t--"); //Pra você
 
         Set<Map.Entry<Integer, Livro>> meusLivros4 = new TreeSet<>(new ComparatorPaginas());
         meusLivros4.addAll((Collection<? extends Entry<Integer, Livro>>) meusLivros.entrySet());
         for (Entry<Integer,Livro> entry : meusLivros4) {
             System.out.println(entry.getKey() + " - " + entry.getValue().getPaginas());
-        }
-    }  
+        }*/
+    }
 }
 
 class Livro {
